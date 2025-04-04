@@ -149,48 +149,86 @@ form button {
   margin-right: 40px;
 }
 
+.get-recipe-container button:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 1px 3px 0px #0000001A;
+}
+
+.clicked {
+  border: 2px solid #FFFFFF;
+}
+
 /*=====SUGGESTED RECIPE =====*/
 
-.suggested-recipe {
-width: 574px;
-display: flex;
-flex-direction: column;
-margin: 50px auto;
-}
-
-.suggested-recipe h2 {
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 38px;
-  color: #141413;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.suggested-recipe article p {
-  font-weight: 400;
-  font-size: 18px;
+.suggested-recipe-container {
   color: #475467;
   line-height: 28px;
-  text-align: left;
-}
-
-.suggested-recipe article h3 {
-  text-align: left;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
-  color: #475467;
-} 
-
-.suggested-recipe article ol {
-  text-align: left;
+  font-size: 1.125rem;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #475467;
 }
 
-.suggested-recipe article ol li {
-  margin-bottom: 10px;
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}
+
+/*=====LOADER =====*/
+.loader {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+  margin: auto;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+
+/*=====RESPONSIVE =====*/
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .root-component{
+    width: 100vw;
+  }
+  form {
+    width: 100vw;
+    margin: auto;
+    margin-left: -20px;
+  }
+  form input {
+    width: 100px;
+  }
+  form button {
+    width: 100px;
+  }
+  .get-recipe-container {
+    width: 100vw; 
+  }
+
+  .get-recipe-container div {
+    margin-left: 20px;
+  }
+  .get-recipe-container div  h3{
+  font-size: 15px;
+  }
+
+  .get-recipe-container div p{
+    font-size: 10px;
+  }
+
+  .get-recipe-container button {
+    width: 120px;
+  }
+
+  .ingredients-header {
+    margin-left: 20px;
+  }
+
+  .ingredients-container ul{
+    margin-left: -25px;
+    color: #D17557;
+    margin-left: -80px;
+  }
 }

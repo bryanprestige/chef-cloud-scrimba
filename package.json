@@ -7,11 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
-  },
+    "preview": "vite preview",
+    "server:express:start": "node --env-file=.env --watch server/server.express.js"
+    },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@huggingface/inference": "^3.6.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

@@ -4,6 +4,7 @@ import IngredientsList from './IngredientsList.jsx'
 export default function Form()  {
     const [ingredients, setIngredients] = useState([])
 
+    
     function addIngredient(FormData) {
         const newIngredient = FormData.get('ingredient')
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
